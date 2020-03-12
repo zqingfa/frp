@@ -17,6 +17,6 @@ COPY ./frps.ini /frps/frps.ini
 VOLUME /frps/log
 
 WORKDIR /frps
-
+EXPOSE 7000 7001 7500 
 ENV TOKEN=${TOKEN_ARG}
 ENTRYPOINT ["./frps","-c","/frps/frps.ini"]
